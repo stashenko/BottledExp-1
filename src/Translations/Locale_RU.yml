@@ -1,0 +1,79 @@
+Prefix: '&3[&6EXP&3] '
+Self: '&4Вы не можете отправить &eEXP &4себе!'
+Reload: '&2Конфигурация перезагружена.'
+Enchant: '&3Вы потратили &e[xp] &eEXP &3на зачарование&f.'
+GotExp: '&3Вы получили: &e[xp] &eEXP'
+Store:
+  Name: '&e|   &bБутылёк опыта   &e|'
+  BottleLore: '&eОпыта в бутыльке&f:'
+  ExpLoreColor: '&6'
+command:
+  help:
+    output:
+      usage: '&3Используйте&f: &6%usage%'
+      cmdInfoFormat: '[command] &f- &e[description]'
+      cmdFormat: '&6/[command] &f[arguments]'
+      helpPageDescription: '&e* [description]'
+      title: '&2--------&e ========&6|  &eEXP  &6|&e======== &2--------'
+  stats:
+    help:
+      info: '&3Проверка информации об &eEXP'
+      args: '&6(Ник игрока)'
+    info:
+      feedback:
+      - '&3У вас имеется &e[xp] &eEXP &3и ваш уровень &6[level]'
+      - '&3Вам нужно &e[xpdelta] &eEXP &3или &5[bottles] &5бутыль&f(-&5ля&f,-&5лей&f)
+        &3для следующего уровня&f!'
+      Moneyfeedback: '&3Это будет стоить вам &6[money]'
+  until:
+    help:
+      info: '&3Проверьте&f, &3сколько бутылок вам нужно для достижения уровня&f.'
+      args: '[уровень]'
+    info:
+      moreThan: '&3Это должно быть больше&f, &3чем ваш уровень&f!'
+      feedback: '&3Вам нужно &e[xp] &eEXP или &5[bottles] &5бутыль &3для достижения
+        &6[level] &6уровня'
+      Moneyfeedback: '&3Это будет стоить вам &6[money]'
+  give:
+    help:
+      info: '&3Дать &eEXP &3другому игроку'
+      args: '[Ник игрока] [exp]'
+    info:
+      noExp: '&4Недостаточно опыта.'
+      sender: '&3Вы передали &e[amount] &eEXP &3игроку &a[name] &3и потеряли &c[lost]
+        &cEXP'
+      receiver: '&3Вы получили &e[amount] &eEXP &3от &a[name] &3и потеряли &c[lost]
+        &cEXP'
+  eblock:
+    help:
+      info: '&3Создает блок обмена &eEXP&f, &3на который вы смотрите&f.'
+      args: ''
+    info:
+      created: '&2Создано'
+      removed: '&4Удалено'
+  reload:
+    help:
+      info: '&2Обновить файлы конфигурации'
+      args: ''
+  get:
+    help:
+      info: '&3Обмен &eEXP &3на &5бутылки'
+      args: '[количество/max]'
+    info:
+      noExp: '&4У вас не хватает опыта!'
+      NoMoney: '&4У вас недостаточно денег!'
+      NoItems: '&4У вас не хватает предметов!'
+      Cost: '&2Стоимость сделки&f: &6[cost]'
+      Order: '&2Вы получили&f: &5[bottles] &5бутыль&f(-&5ля&f,-&5лей&f)'
+  store:
+    help:
+      info: '&2Перенос опыта в бутылёк'
+      args: '[exp/levelL/max]'
+    info:
+      converted: '&2В бутылёк помещено&f: &e[exp] &eEXP'
+  consume:
+    help:
+      info: '&2Consume bottles from your hand'
+      args: '[amount/all]'
+    info:
+      consumed: '&2Consumed &6[bottles] &2bottles and gained &6[exp] &2exp'
