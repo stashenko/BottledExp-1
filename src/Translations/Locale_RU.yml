@@ -73,7 +73,7 @@ command:
       converted: '&2В бутылёк помещено&f: &e[exp] &eEXP'
   consume:
     help:
-      info: '&2Consume bottles from your hand'
-      args: '[amount/all]'
+      info: '&2Употребляйте опыт из бутылки в руках'
+      args: '[количество/all]'
     info:
-      consumed: '&2Consumed &6[bottles] &2bottles and gained &6[exp] &2exp'
+      consumed: '&2Израсходовано &6[bottles] &2бутылок и получено &6[exp] &2опыта'
